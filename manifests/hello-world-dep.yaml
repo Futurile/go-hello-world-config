@@ -1,0 +1,21 @@
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    flux.weave.works/automated: "true"
+  name: hello-world
+  labels:
+    name: hello-world
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: hello-world
+    spec:
+      containers:
+      - name: hello-world
+        image: gcr.io/gcp-weave-cicd/go-hello-world:master-61f9696
+        ports:
+        - containerPort: 8080
