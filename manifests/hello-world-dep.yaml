@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: gcr.io/gcp-weave-cicd/go-hello-world:master-61f9696
+        image: gcr.io/gcp-weave-cicd/go-hello-world:master-bee510b
         ports:
         - containerPort: 8080
